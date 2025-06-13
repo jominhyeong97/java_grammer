@@ -1,8 +1,6 @@
 package C01Basic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class C07Array {
     public static void main(String[] args) {
@@ -122,27 +120,185 @@ public class C07Array {
 
 
 
-//        선택정렬 알고리즘 직접구현
-        int [] arr = {17,12,20,10,15};
-        int [] temp = new int[arr.length];
-        int index = 0;
-        int min = Integer.MAX_VALUE;
+////        선택정렬 알고리즘 직접구현 : 1)min값찾기 2)자리change 3)2중for문(index주의)
+//        int [] arr = {17,12,20,10,15};
+////        자리를 결정
+//        for(int i=0;i<arr.length;i++) {
+//            int min = arr[i];
+//            int minIndex = i;
+////        min값을 찾기 위한 for문
+//            for(int j=i+1;j<arr.length;j++) {
+//                if(min < arr[j]) {
+//                    min = arr[j];
+//                    minIndex = j;
+//                }
+//            }
+////        자리체인지 로직
+//            int temp = arr[i];
+//            arr[i] = arr[minIndex];
+//            arr[minIndex] = temp;
+//        }
+//        System.out.println(Arrays.toString(arr));
 
-        /*
-        1.배열에서 최소값을 찾는다. 최소값의 범위는 0~길이까지 최소값의 인덱스번호를 받는다.
-        인덱스 번호에 맞는 새 배열에 그 값을 저장한다.
-        2. 배열에서 최소값을 찾는다. 최소값의 범위는 1~길이까지
-         */
 
-        for(int i=0; i<arr.length; i++) {
-            if(arr[i] < min) {
-                min = arr[i];
 
-            }
-            temp[i] = min;
 
-        }
-        System.out.println(Arrays.toString(temp));
+
+////        조합문제 : 모두 각기 다른 숫자의 배열이 있을때, 만들어질 수 있는 두 숫자의 조합을 문자열 형태로 출력
+////        ex.(10.20)(10,30)(10,40)(10,50)(20,30)...(40,50)
+//
+//        int[] intArr = {10,20,30,40,50};
+//        for(int i=0; i<intArr.length; i++) {
+//            for(int j=i+1; j<intArr.length; j++) {
+//                System.out.println("(" + intArr[i] + ") (" + intArr[j] + ")");
+//            }
+//        }
+
+
+
+
+
+
+////        배열의 중복제거 : set 자료구조(중복x,순서x)를 활용하여 중복제거
+//        int[] arr = {10,10,20,30,30,40};
+//        Set<Integer> mySet = new HashSet<>();
+//        for(int a : mySet) {
+//            mySet.add(a);
+//        }
+//        int [] intArr = new int[mySet.size()];
+//        int index = 0;
+//        for(int b : mySet) {
+//            intArr[index] = b;
+//            index++;
+//        }
+//        Arrays.sort(intArr);
+//        for(int i=0; i<intArr.length; i++) {
+//            for(int j=0; j<intArr.length; j++) {
+//                if(i==j) {
+//                    continue;
+//                }
+//                System.out.println("(" + intArr[i] + ") (" + intArr[j] + ")");
+//            }
+//        }
+//
+
+
+
+//        프로그래머스 - 두 개 뽑아서 더하기(조합+중복제거)
+
+
+
+
+////        배열의 검색
+//        int[] arr = {5,3,1,8,7};
+//        int target = 8;
+////        8이 몇번째 index에 있는지 출력
+//        for(int i=0; i<arr.length; i++) {
+//            if(arr[i] == target) {
+//                System.out.println(i+1 + "번째에 있습니다.");
+//                break;
+//            }
+//        }
+
+////        이분탐색(이진검색) - binary search
+////        사전에 데이터가 오름차순 정렬 돼 있을 경우, 이분탐색 가능
+//        int [] arr = {1,3,6,8,9,11,15};
+//        System.out.println(Arrays.binarySearch(arr,15));
+////        값이 있으면 해당 index리턴
+////        값이 없으면 마이너스 리턴
+
+
+
+//        백준 - 수 찾기 : 1920번
+
+
+
+
+
+////        배열의 값 비교
+//        int [] arr1 = {10,20,30};
+//        int [] arr2 = {10,20,30};
+//        System.out.println(Arrays.equals(arr1,arr2));
+
+
+
+
+
+
+////        2차원 배열의 선언과 값 할당
+////        {{1,2},{1,2},{1,2}}
+//
+//        int [][] arr = new int[3][2];
+//        arr[0][0] = 1;
+//        arr[0][1] = 2;
+//        arr[1][0] = 3;
+//        arr[1][1] = 4;
+//        arr[2][0] = 4;
+//        arr[2][1] = 4;
+//
+////        리터럴 방식
+//        int [][] arr2 = {{1,2},{3,4},{5,6}};
+//
+//
+//
+////        가변배열 : 배열의 전체길이는 반드시 할당
+//        int[][] arr3 = {{1,2},{1,2,3},{1,2,3,4}};
+////        2차원 배열의 출력
+//        System.out.println(arr3); //2차원 배열의 주소
+//        System.out.println(Arrays.toString(arr3)); //각 2차원 배열의 주소
+//        System.out.println(Arrays.deepToString(arr3)); //모든 각 2차원 배열의 값
+//
+//        int [][] arr4 = new int [3][];
+//        arr4[0] = new int[2];
+//        arr4[1] = new int[3];
+//        arr4[2] = new int[4];
+
+
+//        [3][4] 사이즈 선언하고 1~12까지 숫자값을 각 배열에 순차적으로 할당
+//        {{1,2,3,4},{5,6,7,8},{9,10,11,12}}
+
+
+//        int [][] arr = new int[3][4];
+//        int val = 1;
+//        for(int i=0; i<arr.length; i++) {
+//            for(int j=0; j<arr[i].length; j++) {
+//                arr[i][j] = val;
+//                val++;
+//            }
+//        }
+//        System.out.println(Arrays.deepToString(arr));
+//
+//
+////        가변배열 값 채우기
+//        int[][] arr2 = new int [3][];
+//        int num = 1;
+//        for(int i=0; i<arr2.length; i++) {
+//            arr2[i] = new int[4];
+//            for(int j=0; j<arr2[i].length; j++) {
+//                arr2[i][j] = num;
+//                num++;
+//            }
+//        }
+//        System.out.println(Arrays.deepToString(arr2));
+//
+
+
+
+
+//        행렬의 덧셈 - 프로그래머스
+//        K번째 수 - 프로그래머스???
+
+
+
+////        배열복사 : Arrays.copyOf(배열명, length), Arrays.copyOfRange(배열명, start, end)
+//        int [] arr = {1,2,3,4,6,67,7,8,6,4,2,1};
+//        int [] arr1 = Arrays.copyOf(arr,4);
+//        System.out.println(Arrays.toString(arr1));
+//        int [] arr2 = Arrays.copyOfRange(arr, 3,6);
+//        System.out.println(Arrays.toString(arr2));
+//
+
+
 
 
 

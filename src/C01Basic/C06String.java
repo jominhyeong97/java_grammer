@@ -124,6 +124,7 @@ public class C06String {
 //        프로그래머스 나머지 구하기(플랫폼 사용방법)
 //        프로그래머스 특정 문자 제거하기
 
+
 ////        substring(a,b) : a이상 b미만의 index의 문자를 잘라 반환
 //        String st1 = "hello world";
 //        System.out.println(st1.substring(0,5));
@@ -182,9 +183,9 @@ public class C06String {
 //            System.out.println(Arrays.toString(arr3));
 //
 //
-////            null과 공백의 차이, "" > isEmpty , " " > isBlank
+////            null과 공백의 차이, "" > isEmpty , " " > isBlank (매우중요!!!!)
 //            String st1 = null; //null은 String이 아님
-//            String st2 = ""; //공백은 문자열
+//            String st2 = ""; //빈 문자열은 문자열
 //            String st3= " ";
 //            System.out.println(st1==st2);
 //            System.out.println(st1.isEmpty()); //null pointer exception 발생
