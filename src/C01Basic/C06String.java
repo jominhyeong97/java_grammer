@@ -248,6 +248,18 @@ public class C06String {
 
 
 
+
+//        문자열비교
+        String s1 = "hello";
+        String s2 = "dello";
+        String s3 = "hello";
+        System.out.println(s1.compareTo(s2)); //양수
+        System.out.println(s2.compareTo(s1)); //음수
+        System.out.println(s1.compareTo(s3));
+
+
+
+
 //        프로그래머스 - 문자열 밀기 로직 해결 그냥 억까문제
 
 
