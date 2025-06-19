@@ -21,9 +21,6 @@ public class C05Scope {
         scope2(p1);
         System.out.println(p1.printPerson());
 
-        String str = "메인메서드에서 작성한 것";
-        scope3(str);
-        System.out.println(str);
 
 
 
@@ -48,8 +45,5 @@ public class C05Scope {
         p1.setAge(30);
         System.out.println(p1.printPerson());
     }
-    public static void scope3(String a) {
-        a += " 메서드로 작성한 부분";
-        System.out.println(a);
-    }
+
 }
