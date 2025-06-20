@@ -158,15 +158,17 @@ class Author {
     private String name;
     private String email;
     private String password;
-    static private int id = 0;
-    private int authorId;
+    static private Integer id = 1;
+    //일반적으로 클래스를 정의할때 원시자료형은 Wrapper클래스로 사용
+    private Integer authorId;
 
     public Author(String name, String email, String password) {
-        id++;
         this.authorId = id; //모르는부분
         this.name = name;
         this.email = email;
         this.password = password;
+        id++;
+
     }
     public int getAuthorId() {
         return authorId;
@@ -198,8 +200,9 @@ class Author {
 class Post {
     private String title;
     private String contents;
-    private static int postId = 1;
-    private int autoIncrementId;
+    private static Integer postId = 1;
+    private Integer autoIncrementId;
+    //객체 안의 객체를 선언함으로써 post객체에서 쉽게 author 객체에 접근 가능
     private Author author;
 
     public Post(String title, String contents, Author author) {
