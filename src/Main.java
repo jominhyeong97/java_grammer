@@ -1,14 +1,18 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
 
-
-public class Main {
-    public static void main(String[] args) throws IOException {
-
-
-
-        //return answer;
+public class Main extends  Test{
+    static int a = 20;
+    public static void main(String[] args)  {
+        Test t = new Test();
+        System.out.println(t.a);
+        System.out.println(a);
     }
+}
+
+class Test {
+int a = 111111;
+int b = 20;
+
+
+
 }
