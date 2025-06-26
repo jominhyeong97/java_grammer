@@ -170,7 +170,7 @@ public class C04StreamApi {
 //        if(opt2_1.isPresent()) {
 //            System.out.println(opt2_1.get());
 //        } else {
-////            System.out.println(opt2_1.get()); //에러발행
+////            System.out.println(opt2_1.get()); //에러발생
 //            System.out.println("값이없습니다.");
 //        }
 //

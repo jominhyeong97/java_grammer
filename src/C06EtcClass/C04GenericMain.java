@@ -25,7 +25,7 @@ public class C04GenericMain {
 
 //        제네릭 사용예시
         List<String> myList = new ArrayList<>();
-//        GenericTest<Person> g1 = new GenericTest<>(p1, 10);  :안됨 이유는 모름..
+//        GenericTest<Person> g1 = new GenericTest<>(p1, 10); : 안됨 이유는 모름..
         GenericPerson2<Integer> g2 = new GenericPerson2<>(10,"hi");
     }
 
